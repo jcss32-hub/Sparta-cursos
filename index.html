@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sparta Cursos — cursos preparatórios e soluções de estudo para concursos públicos.">
+  <meta name="theme-color" content="#0a0705">
+  <title>Sparta Cursos | Preparação que gera resultado</title>
+  <link rel="icon" type="image/jpeg" href="assets/img/logo-sparta.jpg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header" id="inicio">
+    <div class="container nav-wrap">
+      <a class="logo" href="#inicio" aria-label="Sparta Cursos - início">
+        <img class="logo-mark" src="assets/img/logo-sparta.jpg" alt="Sparta Cursos">
+        <span>SPARTA<span class="logo-accent">CURSOS</span></span>
+      </a>
+
+      <button class="menu-button" id="menuButton" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+      <nav class="nav" id="nav">
+        <a href="#inicio">Início</a>
+        <a href="#cursos">Cursos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-outline" onclick="abrirLogin()">Entrar</button>
+        <a class="btn btn-primary" href="#cursos">Ver cursos</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">PREPARAÇÃO PARA CONCURSOS</span>
+          <h1>Transforme <span>estudo</span> em resultado.</h1>
+          <p>
+            Cursos preparatórios, revisão e estrutura de estudo para quem
+            busca uma preparação mais organizada e objetiva.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#cursos" class="btn btn-primary btn-large">Conhecer cursos</a>
+            <a href="#contato" class="btn btn-ghost btn-large">Falar com a equipe →</a>
+          </div>
+
+          <div class="stats">
+            <div><strong>+5 mil</strong><span>alunos</span></div>
+            <div><strong>7</strong><span>soluções de estudo</span></div>
+            <div><strong>4,9/5</strong><span>avaliação</span></div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-top">
+            <span class="badge">DESTAQUE</span>
+            <span class="live-dot">● Turmas abertas</span>
+          </div>
+          <div class="shield"><img src="assets/img/logo-sparta.jpg" alt="Sparta Cursos"></div>
+          <p class="mini-label">PREPARAÇÃO ESTRATÉGICA</p>
+          <h2>Estude com direção.</h2>
+          <p>Conteúdo, revisão e acompanhamento para manter o foco na sua preparação.</p>
+          <div class="progress-label"><span>Seu progresso</span><b>68%</b></div>
+          <div class="progress"><span></span></div>
+          <a href="#cursos" class="card-link">Explorar opções →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section categories">
+      <div class="container">
+        <div class="section-heading compact">
+          <div>
+            <span class="eyebrow">ENCONTRE SUA PREPARAÇÃO</span>
+            <h2>Opções para diferentes objetivos.</h2>
+          </div>
+        </div>
+
+        <div class="category-grid">
+          <button class="category-card" onclick="filtrarCursos('todos')">
+            <span>✦</span><strong>Todos</strong><small>Ver catálogo</small>
+          </button>
+          <button class="category-card" onclick="filtrarCursos('seguranca')">
+            <span>🛡</span><strong>Segurança</strong><small>PCAL • PMAL • PMPE</small>
+          </button>
+          <button class="category-card" onclick="filtrarCursos('policia-penal')">
+            <span>⚖</span><strong>Polícia Penal</strong><small>PPAL + PPPE</small>
+          </button>
+          <button class="category-card" onclick="filtrarCursos('saude')">
+            <span>✚</span><strong>Saúde</strong><small>SESAU • Reta Final</small>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section courses" id="cursos">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">CATÁLOGO ATUAL</span>
+            <h2>Escolha sua preparação.</h2>
+            <p>Confira as opções apresentadas neste projeto demonstrativo.</p>
+          </div>
+          <span class="catalog-note">Valores e turmas conforme informações fornecidas para o projeto.</span>
+        </div>
+
+        <div class="course-grid" id="courseGrid">
+          <article class="course-card" data-category="seguranca">
+            <div class="course-image security">
+              <span class="course-tag">PCAL</span><div class="course-symbol">⚔</div>
+              <span class="course-format">MANHÃ OU NOITE</span>
+            </div>
+            <div class="course-body">
+              <span class="course-type">CURSO PREPARATÓRIO</span>
+              <h3>PCAL</h3>
+              <p>Preparação direcionada para o concurso da Polícia Civil de Alagoas.</p>
+              <ul><li>Turmas de manhã ou noite</li><li>Conteúdo preparatório</li></ul>
+              <div class="course-footer">
+                <div class="price"><small>À vista</small><strong>R$ 797</strong><span>ou 10x R$ 89,90</span></div>
+                <button class="btn btn-primary btn-small" onclick="inscreverCurso('PCAL')">Tenho interesse</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card featured" data-category="seguranca">
+            <div class="course-image poster-pmal"><span class="featured-label">MAIS PROCURADO</span><span class="course-format">MANHÃ OU NOITE</span></div>
+            <div class="course-body">
+              <span class="course-type">CURSO PREPARATÓRIO</span>
+              <h3>PMAL</h3>
+              <p>Preparação focada no concurso da Polícia Militar de Alagoas.</p>
+              <ul><li>Turmas de manhã ou noite</li><li>Trilha de preparação</li></ul>
+              <div class="course-footer">
+                <div class="price"><small>À vista</small><strong>R$ 797</strong><span>ou 10x R$ 89,90</span></div>
+                <button class="btn btn-primary btn-small" onclick="inscreverCurso('PMAL')">Tenho interesse</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card" data-category="seguranca">
+            <div class="course-image poster-pmpe"><span class="course-format">MANHÃ • TARDE • NOITE • MADRUGADA</span></div>
+            <div class="course-body">
+              <span class="course-type">CURSO PREPARATÓRIO</span>
+              <h3>PMPE</h3>
+              <p>Preparação para o concurso da Polícia Militar de Pernambuco.</p>
+              <ul><li>Quatro opções de horário</li><li>Rotina flexível de estudos</li></ul>
+              <div class="course-footer">
+                <div class="price"><small>À vista</small><strong>R$ 697</strong><span>ou 10x R$ 79,90</span></div>
+                <button class="btn btn-primary btn-small" onclick="inscreverCurso('PMPE')">Tenho interesse</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card" data-category="policia-penal">
+            <div class="course-image poster-ppal-pppe"><span class="course-format">PPAL + PPPE</span></div>
+            <div class="course-body">
+              <span class="course-type">CURSO PREPARATÓRIO</span>
+              <h3>PPAL + PPPE</h3>
+              <p>Uma preparação integrada para Polícia Penal de Alagoas e Pernambuco.</p>
+              <ul><li>Dois concursos em um curso</li><li>Conteúdo direcionado</li></ul>
+              <div class="course-footer">
+                <div class="price"><small>À vista</small><strong>R$ 797</strong><span>ou 10x R$ 99,90</span></div>
+                <button class="btn btn-primary btn-small" onclick="inscreverCurso('PPAL + PPPE')">Tenho interesse</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card" data-category="saude">
+            <div class="course-image health"><span class="course-tag">RETA FINAL</span><div class="course-symbol">✚</div><span class="course-format">SÁBADO</span></div>
+            <div class="course-body">
+              <span class="course-type">CURSO INTENSIVO</span>
+              <h3>SESAU Reta Final</h3>
+              <p>Revisão intensiva para a reta final da preparação para a área da saúde.</p>
+              <ul><li>Encontros aos sábados</li><li>Foco em revisão</li></ul>
+              <div class="course-footer">
+                <div class="price"><small>À vista</small><strong>R$ 499,90</strong><span>ou 10x R$ 69,90</span></div>
+                <button class="btn btn-primary btn-small" onclick="inscreverCurso('SESAU Reta Final')">Tenho interesse</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card" data-category="redacao">
+            <div class="course-image writing"><span class="course-tag">03/10</span><div class="course-symbol">✎</div><span class="course-format">IMERSÃO</span></div>
+            <div class="course-body">
+              <span class="course-type">EVENTO</span>
+              <h3>Português e Redação</h3>
+              <p>Imersão para reforçar português e redação em uma preparação objetiva.</p>
+              <ul><li>Data: 03/10</li><li>Formato de imersão</li></ul>
+              <div class="course-footer">
+                <div class="price"><small>Investimento</small><strong>R$ 29,90</strong><span>evento especial</span></div>
+                <button class="btn btn-primary btn-small" onclick="inscreverCurso('Imersão Português e Redação - 03/10')">Tenho interesse</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card" data-category="estudo">
+            <div class="course-image study"><span class="course-tag">ESTUDO</span><div class="course-symbol">▣</div><span class="course-format">DIÁRIA</span></div>
+            <div class="course-body">
+              <span class="course-type">ESTRUTURA DE ESTUDO</span>
+              <h3>Cabines de Estudo</h3>
+              <p>Ambiente dedicado para quem quer estudar com mais concentração e rotina.</p>
+              <ul><li>A partir de R$ 39,90</li><li>Diária de estudo</li></ul>
+              <div class="course-footer">
+                <div class="price"><small>A partir de</small><strong>R$ 39,90</strong><span>por diária</span></div>
+                <button class="btn btn-primary btn-small" onclick="inscreverCurso('Cabines de Estudo')">Tenho interesse</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="empty-state" id="emptyState">Nenhum curso encontrado nessa categoria.</p>
+      </div>
+    </section>
+
+    <section class="section about" id="sobre">
+      <div class="container about-grid">
+        <div class="about-visual">
+          <div class="about-panel">
+            <span class="eyebrow">FOCO • DISCIPLINA • RESULTADO</span>
+            <strong>SPARTA</strong>
+            <span>CURSOS</span>
+          </div>
+        </div>
+        <div class="about-content">
+          <span class="eyebrow">SOBRE O PROJETO</span>
+          <h2>Mais do que cursos. Uma jornada de evolução.</h2>
+          <p>
+            A proposta visual deste projeto é apresentar uma plataforma moderna
+            de cursos preparatórios, com navegação simples, informações objetivas
+            e chamadas claras para contato.
+          </p>
+          <div class="about-points">
+            <div><span>01</span><div><h3>Clareza</h3><p>Informações importantes organizadas para facilitar a decisão.</p></div></div>
+            <div><span>02</span><div><h3>Experiência</h3><p>Interface responsiva pensada para celular, tablet e computador.</p></div></div>
+            <div><span>03</span><div><h3>Conversão</h3><p>CTAs e contato rápido para transformar interesse em atendimento.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials" id="depoimentos">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="eyebrow">EXPERIÊNCIA</span>
+          <h2>Uma preparação feita para manter o foco.</h2>
+          <p>Depoimentos abaixo são exemplos demonstrativos para apresentação do layout.</p>
+        </div>
+        <div class="testimonial-grid">
+          <article class="testimonial"><div class="stars">★★★★★</div><p>“A organização da plataforma deixa muito mais fácil entender as opções de preparação e escolher o próximo passo.”</p><strong>Mariana C.</strong><span>Aluna • exemplo demonstrativo</span></article>
+          <article class="testimonial"><div class="stars">★★★★★</div><p>“Gostei da proposta de ter horários diferentes e informações objetivas sobre cada curso.”</p><strong>Rafael S.</strong><span>Aluno • exemplo demonstrativo</span></article>
+          <article class="testimonial"><div class="stars">★★★★★</div><p>“A experiência no celular é simples e direta, principalmente para consultar cursos e entrar em contato.”</p><strong>Ana L.</strong><span>Aluna • exemplo demonstrativo</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-inner">
+        <div><span class="eyebrow">PRONTO PARA COMEÇAR?</span><h2>Seu próximo passo começa aqui.</h2><p>Conheça as opções de preparação e fale com a equipe.</p></div>
+        <a href="#contato" class="btn btn-primary btn-large">Quero saber mais →</a>
+      </div>
+    </section>
+
+    <section class="section contact" id="contato">
+      <div class="container contact-grid">
+        <div>
+          <span class="eyebrow">FALE CONOSCO</span>
+          <h2>Tem alguma dúvida?</h2>
+          <p>Envie uma mensagem pelo formulário ou use o botão de WhatsApp dos cursos.</p>
+          <div class="contact-info"><div><span>⌁</span><div><strong>Atendimento</strong><p>Informações sobre cursos e turmas</p></div></div><div><span>◉</span><div><strong>Horários</strong><p>Consulte a disponibilidade de cada turma</p></div></div></div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <label>Nome<input type="text" id="name" placeholder="Seu nome" required></label>
+          <label>E-mail<input type="email" id="email" placeholder="seuemail@exemplo.com" required></label>
+          <label>Mensagem<textarea id="message" rows="5" placeholder="Como podemos ajudar?" required></textarea></label>
+          <button class="btn btn-primary btn-large" type="submit">Enviar mensagem</button>
+          <small>Formulário demonstrativo — sem backend.</small>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><a class="logo" href="#inicio"><span class="logo-mark">S</span><span>SPARTA<span class="logo-accent">CURSOS</span></span></a><p>Preparação, disciplina e direção para sua jornada.</p></div>
+      <div><h4>Navegação</h4><a href="#cursos">Cursos</a><a href="#sobre">Sobre</a><a href="#depoimentos">Depoimentos</a><a href="#contato">Contato</a></div>
+      <div><h4>Projeto</h4><span>HTML5 • CSS3 • JavaScript</span><span>Design responsivo</span><span>GitHub Pages</span></div>
+      <div><h4>Contato</h4><a href="#contato">Falar com a equipe</a><a href="#cursos">Ver catálogo</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 Sparta Cursos — Projeto demonstrativo.</span><span>Desenvolvido para portfólio.</span></div>
+  </footer>
+
+  <div class="modal" id="loginModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" onclick="fecharLogin()" aria-label="Fechar">×</button>
+      <span class="eyebrow">ÁREA DO ALUNO</span>
+      <h2>Entrar na plataforma</h2>
+      <p>Área de login demonstrativa deste projeto.</p>
+      <form id="loginForm">
+        <label>E-mail<input type="email" required placeholder="seuemail@exemplo.com"></label>
+        <label>Senha<input type="password" required placeholder="••••••••"></label>
+        <button class="btn btn-primary btn-large" type="submit">Entrar</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
